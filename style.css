@@ -65,8 +65,8 @@ body {
 
 .search-container {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 40px; /* Increase the top margin to create more space */
+  margin-bottom: 20px; /* Adjust bottom margin as needed */
 }
 
 .search-box {
@@ -95,6 +95,42 @@ body {
       );
 }
 
+/* Style for scrollbar */
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Style for scrollbar track */
+::-webkit-scrollbar-track {
+  background: 
+    radial-gradient(
+        circle, 
+        hsl(210, 20%, 15%) 0%, 
+        hsl(210, 20%, 15%) 100%
+      ),
+    linear-gradient(
+        344deg, 
+        hsl(210, 20%, 20%),
+        hsl(220, 20%, 15%),
+        hsl(210, 20%, 20%)
+      );
+}
+
+/* Style for scrollbar thumb (slider) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)); /* Gradient background */
+  border-radius: 5px; /* Round the corners */
+  border: 2px solid transparent; /* Transparent border */
+  background-clip: padding-box; /* Clip to the inside of the scrollbar */
+}
+
+/* On hover, make scrollbar thumb lighter */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
+}
+
 .movie-list {
   list-style: none;
   padding: 0;
@@ -118,8 +154,6 @@ body {
   margin: 0; /* Remove default margin */
 }
 
-
-
 .movie-list li img {
   width: 150px;
   height: 220px;
@@ -140,6 +174,49 @@ body {
   z-index: -1;
   border-radius: 5px;
   animation: animateGlow 10s ease infinite;
+}
+.genre-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.genre-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  background: 
+    radial-gradient(
+        circle, 
+        hsl(210, 20%, 15%) 0%, 
+        hsl(210, 20%, 15%) 100%
+      ),
+    linear-gradient(
+        344deg, 
+        hsl(210, 20%, 20%),
+        hsl(220, 20%, 15%),
+        hsl(210, 20%, 20%)
+      );
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  outline: none;
+}
+
+.genre-button:hover {
+  background: 
+    radial-gradient(
+        circle, 
+        hsl(210, 20%, 20%) 0%, 
+        hsl(210, 20%, 20%) 100%
+      ),
+    linear-gradient(
+        344deg, 
+        hsl(210, 20%, 25%),
+        hsl(220, 20%, 20%),
+        hsl(210, 20%, 25%)
+      );
 }
 
 @keyframes animateGlow {
