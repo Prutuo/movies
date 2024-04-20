@@ -17,7 +17,7 @@ function fetchMovies(url) {
           image.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
           image.alt = movie.title;
         } else {
-          image.src = 'https://raw.githubusercontent.com/prutuo/movies/main/404.png';
+          image.src = '404.png
           image.alt = 'Poster Not Available';
         }
         image.addEventListener('click', () => {
