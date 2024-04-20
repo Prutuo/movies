@@ -17,8 +17,10 @@ function fetchMovies(url) {
           image.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
           image.alt = movie.title;
         } else {
-          image.src = "https://raw.githubusercontent.com/Prutuo/theque/main/404.png";
-          image.alt = 'Poster Not Available';
+          const errorImage = document.createElement('img');
+          errorImage.src = "https://raw.githubusercontent.com/Prutuo/theque/main/404.png";
+          errorImage.alt = "404 Error";
+          listItem.appendChild(errorImage);
         }
         image.addEventListener('click', () => {
           openEmbeddedPlayerInNewTab(movie.id); // Open embedded player in new tab with movie ID
