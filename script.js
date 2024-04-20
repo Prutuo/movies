@@ -18,9 +18,8 @@ function fetchMovies(url) {
           image.alt = movie.title;
         } else {
           const errorImage = document.createElement('img');
-          errorImage.src = "https://raw.githubusercontent.com/Prutuo/theque/main/404.png";
-          errorImage.alt = "404 Error";
-          listItem.appendChild(errorImage);
+          image.src = `https://github.com/Prutuo/theque/blob/main/404.png?raw=true`;
+          image.alt = "404 Error";
         }
         image.addEventListener('click', () => {
           openEmbeddedPlayerInNewTab(movie.id); // Open embedded player in new tab with movie ID
