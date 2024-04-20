@@ -17,7 +17,7 @@ function fetchMovies(url) {
           image.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
           image.alt = movie.title;
         } else {
-          <img src="404.png" alt="404 Error">
+          image.src = "https://raw.githubusercontent.com/Prutuo/theque/main/404.png";
           image.alt = 'Poster Not Available';
         }
         image.addEventListener('click', () => {
